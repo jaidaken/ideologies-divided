@@ -1,10 +1,11 @@
-﻿capital = 126
+capital = 126
 
 oob = "ENG_1936"
 
 set_research_slots = 4
 
-set_national_unity = 0.6
+set_stability = 0.6
+set_war_support = 0.1
 
 # Starting tech
 set_technology = {
@@ -145,7 +146,6 @@ create_country_leader = {
 
 	give_guarantee = POL
 
-	set_national_unity = 0.8
 	oob = "ENG_1939"
 	set_technology = {
 		fighter1 = 1
@@ -206,8 +206,8 @@ create_country_leader = {
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
 		synth_oil_experiments = 1
-		oil_plant = 1
-		improved_oil_plant = 1
+		oil_processing = 1
+		improved_oil_processing = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1
@@ -223,20 +223,12 @@ set_politics = {
 
 	parties = {
 
-		anarchism = {
-			popularity = 2
-		}
-
 		communism = {
 			popularity = 7
 		}
 
-		socialism = {
-			popularity = 0
-		}
-
 		center-left = {
-			popularity = 16
+			popularity = 18
 		}
 
 		center = {
@@ -251,18 +243,6 @@ set_politics = {
 			popularity = 9
 		}
 
-		theocracy = {
-			popularity = 0
-		}
-
-		authoritarianism = {
-			popularity = 0
-		}
-
-		militarism = {
-			popularity = 0
-		}
-
 		fascism = {
 			popularity = 5
 		}
@@ -274,6 +254,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
+
 
 
 
@@ -370,42 +351,48 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "King George V"
-	picture = "Portrait_Britain_George_V.dds"
-	expire = "1936.1.20"
-	ideology = constitutional_monarchy
-	traits = {
-
-	}
-}
-
 create_field_marshal = {
 	name = "Alan Brooke"
 	picture = "Portrait_Britain_Alan_Brooke.dds"
-	traits = { offensive_doctrine defensive_doctrine }
+	traits = { defensive_doctrine trait_cautious career_officer }
 	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 3
 }
 
 create_field_marshal = {
 	name = "Bernard Montgomery"
 	picture = "Portrait_Britain_Bernard_Montgomery.dds"
-	traits = { logistics_wizard offensive_doctrine  }
+	traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
 	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Claude Auchinleck"
 	picture = "Portrait_Britain_Claude_Auchinleck.dds"
-	traits = {  }
+	traits = { inflexible_strategist career_officer }
 	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 5
 }
 
 create_corps_commander = {
 	name = "Neil Ritchie"
 	picture = "Portrait_Britain_Neil_Ritchie.dds"
-	traits = { panzer_leader  }
+	traits = { inflexible_strategist armor_officer politically_connected  }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -413,13 +400,21 @@ create_corps_commander = {
 	picture = "Portrait_Britain_Alan_Cunningham.dds"
 	traits = {}
 	skill = 4
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "William Slim"
 	picture = "Portrait_Britain_William_Slim.dds"
-	traits = { trickster }
+	traits = { trickster war_hero }
 	skill = 5
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 5
 }
 
 create_corps_commander = {
@@ -427,6 +422,10 @@ create_corps_commander = {
 	picture = "Portrait_Britain_Richard_OConnor.dds"
 	traits = {  }
 	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -434,20 +433,32 @@ create_corps_commander = {
 	picture = "Portrait_Britain_William_Platt.dds"
 	traits = {  }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "George Giffard"
 	picture = "Portrait_Britain_George_Giffard.dds"
-	traits = {  }
+	traits = { career_officer }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Harold Alexander"
 	picture = "Portrait_Britain_Harold_Alexander.dds"
-	traits = {  }
+	traits = { politically_connected }
 	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 5
 }
 
 create_corps_commander = {
@@ -455,20 +466,32 @@ create_corps_commander = {
 	picture = "Portrait_Britain_John_Jackie_Smyth.dds"
 	traits = { old_guard }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Thomas Jacomb Hutton"
 		picture = "Portrait_Britain_Thomas_Jacomb_Hutton.dds"
-	traits = {  }
+	traits = { old_guard }
 	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Arthur Percival"
 		picture = "Portrait_Britain_Arthur_Percival.dds"
-	traits = {   }
+	traits = {  trait_cautious }
 	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -476,6 +499,10 @@ create_corps_commander = {
 		picture = "Portrait_Britain_Merton_Beckwith_Smith.dds"
 	traits = { commando }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -483,63 +510,99 @@ create_corps_commander = {
 	picture = "Portrait_Britain_Henry_Pownall.dds"
 	traits = {  trickster }
 	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
 	name = "John Vereker Lord Gort"
 	picture = "Portrait_Britain_John_Vereker.dds"
-	traits = {  }
+	traits = { politically_connected trait_cautious }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Henry Wilson"
 		picture = "Portrait_Britain_Henry_Maitland_Wilson.dds"
-	traits = {  }
+	traits = { old_guard politically_connected }
 	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "William Gott"
 		picture = "Portrait_Britain_William_Gott.dds"
-	traits = { panzer_leader }
+	traits = { armor_officer war_hero inflexible_strategist }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Jock Campbell"
 		picture = "Portrait_Britain_Jock_Campbell.dds"
-	traits = { panzer_leader  }
+	traits = { armor_officer  }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Oliver Leese"
 	picture = "Portrait_Britain_Oliver_Leese.dds"
-	traits = {  panzer_leader }
+	traits = {  armor_officer harsh_leader politically_connected }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Miles Dempsey"
 	picture = "Portrait_Britain_Miles_Dempsey.dds"
-	traits = {  }
+	traits = { brilliant_strategist infantry_officer career_officer }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
 }
 
 create_corps_commander = {
 	name = "Brian Horrocks"
 	picture = "Portrait_Britain_Brian_Horrocks.dds"
-	traits = {  panzer_leader }
+	traits = {  armor_officer career_officer war_hero }
 	skill = 3
 
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Archibald Wavell"
 	picture = "Portrait_Britain_Archibald_Wavell.dds"
-	traits = {  }
+	traits = { career_officer }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_navy_leader = {

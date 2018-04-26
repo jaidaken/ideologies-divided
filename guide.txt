@@ -1,0 +1,111 @@
+	anarchism
+			anarchist_communism
+			anarchist
+
+	communism
+			marxist_leninism
+			maoism
+
+	socialism
+			democratic_socialist
+			trotskyism
+
+	center-left
+			social_democrat
+			progressive
+
+	center
+			liberal_democrat
+			neoliberal
+
+	center-right
+			libertarian
+			conservative
+			nationalism
+
+	monarchy
+			constitutional_monarchy
+			absolute_monarchy
+
+	theocracy
+			islamic
+			catholic
+			jewish
+			hindu
+			buddist
+			orthodox
+
+	authoritarianism
+			authoritarianism
+			despotism
+			oligarchy
+			colonial_overlord
+
+	militarism
+
+			millitary_junta
+			warlord
+
+	fascism
+
+			nazism
+			fascism_ideology
+			falangism
+
+
+
+
+
+
+
+
+
+
+
+			parties = {
+
+				anarchism = {
+					popularity = 2
+				}
+
+				communism = {
+					popularity = 7
+				}
+
+				socialism = {
+					popularity = 0
+				}
+
+				center-left = {
+					popularity = 16
+				}
+
+				center = {
+					popularity = 5
+				}
+
+				center-right = {
+					popularity = 56
+				}
+
+				monarchy = {
+					popularity = 9
+				}
+
+				theocracy = {
+					popularity = 0
+				}
+
+				authoritarianism = {
+					popularity = 0
+				}
+
+				militarism = {
+					popularity = 0
+				}
+
+				fascism = {
+					popularity = 5
+				}
+
+			}
