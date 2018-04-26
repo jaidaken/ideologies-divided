@@ -1,0 +1,22 @@
+ideas = {
+
+	political_advisor = {
+
+		monarchist = {
+
+			picture = generic_political_advisor_europe_4
+
+			allowed = { always = yes }
+
+			traits = { monarchist }
+			
+			on_add  = {
+				country_event = monarchy.2
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}
